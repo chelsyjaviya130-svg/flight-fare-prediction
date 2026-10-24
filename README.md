@@ -1,131 +1,100 @@
-# ✈️ Flight Price Prediction
+# ✈️ AeroFare – Flight Price Prediction Using Machine Learning
 
-A machine learning project that predicts estimated flight ticket prices using a **Random Forest Regression model** and an interactive **Streamlit web application**.
+AeroFare is a Machine Learning project that predicts estimated flight ticket prices based on flight details. It uses a trained Random Forest Regression model and an interactive Streamlit web application.
 
-## Overview
+## 🚀 Project Links
 
-This project uses flight-related features to estimate ticket fares. Users can enter flight details through a web interface and receive a predicted price based on the trained model.
+- **GitHub Repository:** [https://github.com/chelsyjaviya130-svg/flight-fare-prediction](https://github.com/chelsyjaviya130-svg/flight-fare-prediction)
+- **Team Live Demo:** [https://flight-fare-prediction-qb3btfdwzcnxafen8wttqj.streamlit.app/](https://flight-fare-prediction-qb3btfdwzcnxafen8wttqj.streamlit.app/)
+- **Model and Dataset:** [https://huggingface.co/shaswat44/flight-price-prediction-files](https://huggingface.co/shaswat44/flight-price-prediction-files)
 
-**Note:** Predictions are estimates based on the available training data. They are not live airline prices.
+## 📌 Project Overview
 
-## Live Demo
+Flight ticket prices vary depending on airline, travel class, route, departure and arrival times, journey duration, and the number of stops.
 
-Try the application here:
-https://flight-fare-prediction-qb3btfdwzcnxafen8wttqj.streamlit.app/
+AeroFare uses Machine Learning to estimate flight fares from available flight information. The application allows users to enter flight details and view a predicted price.
 
-## Features
+**Note:** Predictions are estimates based on the training data and are not live airline prices.
+
+## ✨ Features
 
 - Interactive Streamlit web application
-- Flight fare prediction based on airline and route
-- Travel class selection (Economy or Business)
+- Flight fare prediction using Machine Learning
+- Flight route and airline details
+- Travel class selection
 - Departure and arrival time inputs
-- Journey duration and number of stops
-- Model evaluation and baseline comparison
-- Saved model loading for predictions
+- Journey duration and stop information
+- Model comparison and evaluation
+- User-friendly interface
 
-## Tech Stack
+## 🛠️ Technologies Used
 
-- **Language:** Python
-- **Data Analysis:** Pandas, NumPy
-- **Visualization:** Matplotlib, Seaborn
-- **Machine Learning:** Scikit-learn, Random Forest Regressor
-- **Web Application:** Streamlit
-- **Model Serialization:** Joblib
-- **Notebook:** Jupyter Notebook
+- **Programming Language:** Python
+- **Web Framework:** Streamlit
+- **Machine Learning:** Scikit-learn, Random Forest Regression
+- **Data Processing:** Pandas, NumPy
+- **Data Visualization:** Matplotlib, Seaborn
+- **Model Storage:** Joblib
+- **Development Environment:** Jupyter Notebook
 
-## Model Performance
+## ⚙️ How It Works
 
-The existing test evaluation reported the following metrics:
+1. Flight data is prepared and processed.
+2. A Machine Learning model is trained using historical flight data.
+3. The trained model is used by the Streamlit application.
+4. Users enter flight details in the application.
+5. The model estimates the flight ticket price.
 
-| Metric | Result |
-|---|---:|
-| Mean Absolute Error (MAE) | ₹1,434.21 |
-| Root Mean Squared Error (RMSE) | ₹3,127.39 |
-| R² Score | 0.9811 |
+## 📂 Main Project Files
 
-These results reflect performance on the evaluated test dataset. They do not guarantee the same accuracy for unseen real-world fares.
+- `app.py` — Streamlit web application
+- `compare_models.py` — Model comparison script
+- `requirements.txt` — Python dependencies
+- `test_*.py` — Model and prediction tests
+- `.gitignore` — Files and folders excluded from Git tracking
 
-## Project Structure
+The trained model and processed dataset are stored separately. Refer to the Model and Dataset link above for access to those files.
 
-```text
-Flight-Price-Prediction/
-├── app.py
-├── data/
-│   └── Freshly_cleaned.csv
-├── models/
-│   └── flight_price_model.pkl
-├── notebook/
-│   └── 01_data_understanding.ipynb
-├── .gitignore
-├── README.md
-└── requirements.txt
-```
-
-The `data/` and `models/` folders are excluded from Git tracking. Make sure the required dataset and trained model are available locally before running the project.
-
-## Run Locally
+## 💻 Run the Project Locally
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/shaswat44/Flight-fare-Prediction.git
-cd Flight-fare-Prediction
+git clone https://github.com/chelsyjaviya130-svg/flight-fare-prediction.git
+cd flight-fare-prediction
 ```
 
-### 2. Create and activate a virtual environment
-
-**Windows PowerShell:**
-
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-```
-
-### 3. Install dependencies
+### 2. Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Add required local files
+### 3. Download the required model and dataset
 
-Place the cleaned dataset at:
+Download the model and dataset from the Model and Dataset link. Place them in the file paths expected by `app.py`.
 
-`data/Freshly_cleaned.csv`
-
-Place the trained model at:
-
-`models/flight_price_model.pkl`
-
-These files are not included in the Git repository.
-
-### 5. Start the application
+### 4. Run the application
 
 ```bash
 streamlit run app.py
 ```
 
-## Dataset
+## ⚠️ Limitations
 
-The project uses a cleaned flight fare dataset containing flight details such as airline, source, destination, travel class, timing, journey duration, stops, and ticket price.
+- Predictions depend on the available training data.
+- The application does not provide live airline ticket prices.
+- Actual prices may differ because airline fares change over time.
 
-Check the dataset's license and redistribution permissions before sharing it publicly.
+## 👥 Author
 
-## Limitations
+'' javiya chelsy''
 
-- Predictions depend on the training dataset and its coverage.
-- The model does not fetch live airline prices.
-- Results may differ for routes, dates, or fare conditions not adequately represented in the training data.
+## 🎓 Internship
 
-## Future Improvements
+Developed as part of the **Data Science Internship at Naviotech Solution**.
 
-- Deploy the application online
-- Add more recent flight data
-- Improve model validation on unseen data
-- Add model comparison and feature importance visualizations
+---
 
-## Author
+**AeroFare — Smarter Flight Fare Estimation**
 
-**Shaswat Bhatnagar**
-
-GitHub: [@shaswat44](https://github.com/shaswat44)
